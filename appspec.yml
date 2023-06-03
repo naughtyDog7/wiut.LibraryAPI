@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /LibraryAPI
+    destination: /var/www/LibraryAPI
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_server
+  BeforeInstall:
+    - location: scripts/install_dependencies
+  AfterInstall:
+    - location: scripts/start_server
