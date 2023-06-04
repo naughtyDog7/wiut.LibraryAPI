@@ -1,2 +1,2 @@
 #!/bin/bash
-pkill dotnet
+systemctl stop libraryapi.service

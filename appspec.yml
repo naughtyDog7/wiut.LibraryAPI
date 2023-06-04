@@ -8,7 +8,7 @@ hooks:
     - location: scripts/stop_server.sh
       runas: root
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/before_install.sh
       runas: root
   ApplicationStart:
     - location: scripts/start_server.sh
