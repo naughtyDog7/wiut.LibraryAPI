@@ -9,6 +9,7 @@ WorkingDirectory=/var/www/LibraryAPI
 ExecStart=/usr/bin/dotnet run
 Restart=always
 RestartSec=10
+Environment=DOTNET_CLI_HOME=/tmp
 SyslogIdentifier=libraryapi
 
 [Install]
