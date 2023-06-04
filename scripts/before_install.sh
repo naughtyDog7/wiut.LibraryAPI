@@ -10,7 +10,6 @@ ExecStart=/usr/bin/dotnet run
 Restart=always
 RestartSec=10
 Environment=DOTNET_CLI_HOME=/tmp
-Environment=ASPNETCORE_URLS=http://*:80
 SyslogIdentifier=libraryapi
 
 [Install]
