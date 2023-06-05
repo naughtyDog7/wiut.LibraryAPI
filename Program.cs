@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("LibraryContext");
 
+builder.Configuration["ASPNETCORE_URLS"] = "http://*:80";
+
 // Add DbContext to the DI container.
 builder.Services.AddDbContext<LibraryContext>(options =>
     options.UseSqlServer(connectionString));
@@ -37,4 +39,4 @@ using (var scope = builder.Services.BuildServiceProvider().CreateScope())
     context.Database.Migrate();
 }
 
-app.Run("http://*:80");
+app.Run();
