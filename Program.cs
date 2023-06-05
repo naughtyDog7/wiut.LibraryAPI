@@ -37,4 +37,4 @@ using (var scope = builder.Services.BuildServiceProvider().CreateScope())
     context.Database.Migrate();
 }
 
-app.Run();
+app.Run("http://*:80");
