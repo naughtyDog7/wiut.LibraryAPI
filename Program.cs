@@ -38,5 +38,5 @@ using (var scope = builder.Services.BuildServiceProvider().CreateScope())
     var context = scope.ServiceProvider.GetRequiredService<LibraryContext>();
     context.Database.Migrate();
 }
-
+app.Urls.Add("http://*:80");
 app.Run();
