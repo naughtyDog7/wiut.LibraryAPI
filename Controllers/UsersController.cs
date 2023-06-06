@@ -38,6 +38,7 @@ namespace LibraryAPI.Controllers
             return Ok(user);
         }
     
+        [HttpPost]
         public ActionResult<User> CreateUser(User newUser)
         {
             var createdUser = _userRepository.Add(newUser);
